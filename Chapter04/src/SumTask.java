@@ -4,6 +4,8 @@ import java.util.concurrent.RecursiveTask;
 // Java ForkJoinPool and work stealing: the array is split in two, the left
 // half is queued with fork, the right half is computed in the same thread,
 // then the left is joined.
+// On the slides and in the lecture notes this class is called Sum; it is SumTask
+// here only because Sum.java (the join example) is in the same default package.
 public class SumTask extends RecursiveTask<Long> {
 	private static final long serialVersionUID = 1L;
 	static final int LIMIT = 2;
